@@ -1,12 +1,12 @@
 import React from "react";
-import { cn } from "../../lib/utils";
+import { cn } from "../lib/utils";
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
   Badge,
-} from "../ui/basic-ui";
+} from "./ui/basic-ui";
 import {
   LineChart,
   Line,

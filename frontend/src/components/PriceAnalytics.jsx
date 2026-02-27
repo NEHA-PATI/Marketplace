@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { cn } from "../../lib/utils";
+import { cn } from "../lib/utils";
 import {
   Card,
   CardContent,
@@ -12,7 +12,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "../ui/basic-ui";
+} from "./ui/basic-ui";
 import {
   LineChart,
   Line,
@@ -46,7 +46,6 @@ import {
 const PriceAnalytics = () => {
   const [timeframe, setTimeframe] = useState("7d");
   const [chartType, setChartType] = useState("price");
-  const [selectedAsset, setSelectedAsset] = useState("all");
 
   // Mock data for different timeframes
   const priceData = {

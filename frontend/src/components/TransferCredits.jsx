@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { cn } from "../../lib/utils";
+import { cn } from "../lib/utils";
 import {
   Card,
   CardContent,
@@ -17,7 +17,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "../ui/basic-ui";
+} from "./ui/basic-ui";
 import {
   Send,
   Shield,
@@ -422,9 +422,9 @@ const TransferCredits = () => {
                         }
                         className={cn(
                           transfer.status === "completed" &&
-                            "bg-green-100 text-green-700",
+                          "bg-green-100 text-green-700",
                           transfer.status === "pending" &&
-                            "bg-yellow-100 text-yellow-700",
+                          "bg-yellow-100 text-yellow-700",
                         )}
                       >
                         {transfer.status}

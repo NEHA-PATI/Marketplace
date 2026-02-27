@@ -1,35 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import Marketplace from "./pages/Marketplace";
+import "./App.css";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+function NotFound() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+    <div className="mx-auto flex min-h-screen max-w-5xl items-center justify-center px-6">
+      <div className="glass-panel w-full max-w-xl rounded-3xl p-10 text-center">
+        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-brand-700">
+          404
+        </p>
+        <h1 className="font-display text-4xl font-semibold text-slate-900">
+          Page Not Found
+        </h1>
+        <p className="mt-3 text-slate-600">
+          The route you opened is not available in this frontend build.
         </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+function App() {
+  return (
+    <div className="app-shell">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Navigate to="/marketplace" replace />} />
+          <Route path="/marketplace" element={<Marketplace />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
+}
+
+export default App;

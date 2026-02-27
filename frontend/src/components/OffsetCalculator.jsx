@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { cn } from "../../lib/utils";
 import {
   Card,
   CardContent,
@@ -18,7 +17,7 @@ import {
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "../ui/basic-ui";
+} from "./ui/basic-ui";
 import {
   Calculator,
   Plane,

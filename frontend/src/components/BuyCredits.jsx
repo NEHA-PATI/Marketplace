@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { cn } from "../../lib/utils";
+import { cn } from "../lib/utils";
 import {
   Card,
   CardContent,
@@ -15,7 +15,7 @@ import {
   SelectTrigger,
   SelectValue,
   Switch,
-} from "../ui/basic-ui";
+} from "./ui/basic-ui";
 import {
   CreditCard,
   Wallet,
